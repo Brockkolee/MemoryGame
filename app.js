@@ -2,6 +2,7 @@ const button = document.getElementById('button')
 const grid = document.getElementById("grid")
 const text = document.getElementById("text")
 const array = []
+const colors = [ "#7FBCD2" , "#A5F1E9", "#E1FFEE", "#FFEEAF", "#FFC4C4", "#B1D7B4", "#CFC5F6", "#B4D5F9", "#B7E5D5", "#E0E7B5", "#EDC4BC", "#AFB4FF" ]
 const clock = document.querySelector('#timer')
 totalCards = 0
 
@@ -24,7 +25,6 @@ function hard() {
 //Generate the array of cards by create the divs
 function getCards(numberOfCards) {
 
-    
     startTime();
     button.style.display = "none"
     text.innerHTML = "Filp the cards and find matching cards"
@@ -62,14 +62,14 @@ function getCards(numberOfCards) {
         const number = document.createElement('div')
         number.classList.add('number')
         number.innerHTML = array[i];
+        number.style.backgroundColor = colors[array[i]]
+        number.style.color = colors[array[i]]
         number.style.display= "none"
         card.appendChild(number);
         card.addEventListener("click", () => {
-            console.log(clickedBox)
             number.style.display= "block"
             clickedBox.push(number.textContent);
             clickedBoxId.push(i)
-            console.log(i)
             if (clickedBox.length == 2) {
                 checkMatch();
             }

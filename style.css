@@ -1,3 +1,7 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 #container {
     height: 90vh;
     display: flex;
@@ -7,13 +11,14 @@
 }
 
 #grid {
+    border: 1px solid grey;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,1fr);
 }
 
 #grid > div {
-    border: solid 1px black;
+    border: solid 1px grey;
     height: 10vmax;
     width: 10vmax;
     font-size: 5em;
@@ -23,20 +28,26 @@
 }
 
 button {
-    margin: 0 1rem 0 1rem;
-    height:8vmin;
-    width: 16vmin;
-    font-size: 3vmin;
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin: 0 1rem;
+    height: 10vmin;
+    width: 20vmin;
+    font-size: 4vmin;
 }
 
 #text {
+    text-align: center;
     font-size: 5vmin;
+    margin: 0;
 }
 
 #timer {
+    margin: 0;
     font-size: 5vmin;
 }
 
 a {
     font-size: 5vmin;
 }
+
